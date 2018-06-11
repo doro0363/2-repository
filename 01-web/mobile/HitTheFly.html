@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit The Fly!</title>
+    <style>
+        #fly {
+            position: absolute;
+            top: 40vh;
+            left: 45vw;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            transition: .05s;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <audio id="buzz" preload="auto" loop>
+    <source src="sounds/buzz.mp3" type="audio/mpeg">
+    Your browser does not support this audio.
+    </audio>
+
+    <audio id="smack" preload="auto">
+         <source src="sounds/smack.mp3" type="audio/mpeg">
+    Your browser does not support this audio.
+    </audio>
+
+    <script>
+        const fly = document.querySelector("#fly");
+        const buzzSound = document.querySelector("#buzz");
+        const smackSound = document.querySelector("#smack");
+        let paused = true;
+        let intv;
+        let speed = 1500;
+
+        fly.addEventListener("click", toggle);
+
+        function toggle() {
+            if (paused) {
+                console.log("start");
+                moveFly();
+                intv = setInterval(moveFly, speed);
+                buzzSound.play();
+                fly.src = "images/fly.jpg";
+                paused = false;
+
+            } else {
+                console.log("stop");
+                clearInterval(intv);
+                smackSound.play();
+                buzzSound.pause();
+                fly.src = "images/fly_dead.jpg";
+                paused = true;
+            }
+        }
+
+        function moveFly() {
+            fly.style.left = Math.random() * 90 + "vw";
+            fly.style.top = Math.random() * 90 + "vh";
+        }
+
+    </script>
+
+</body>
+
+</html>

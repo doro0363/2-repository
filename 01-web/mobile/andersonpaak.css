@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Lobster|Nanum+Gothic:400,700,800|Shadows+Into+Light');
+@font-face {
+    font-family: myFirstFont;
+    src: url(digitaldarksystem.ttf);
+}
+
+h1 {
+    font-family: myFirstFont;
+    font-size: 40px;
+    color: black;
+    display: inline;
+    opacity: 0;
+    font-weight: 700;
+
+}
+
+header{
+    font-family: 'Amatic SC';
+    font-size: 30px;
+    color: darkblue;
+    display: inline;
+    text-align: center;
+    position: relative;
+    left: 39%;
+   
+}
+
+buttons {
+    position: absolute;
+    top: 191px;
+    left: 25%;
+}
+
+button {
+    background-color: black;
+    border: none;
+    color: white;
+    font-family: "Amatic SC";
+    width: 87px;
+    margin-right: 0px;
+    margin-left: 10px;
+    font-size: 30px;
+    text-align: center;
+    padding: 2px;
+    margin-top: 25px;
+}
+
+.goLeft {
+    animation: moving 2s linear infinite;
+    position: absolute;
+}
+
+@keyframes moving {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 80%;
+    }
+}
+
+.moveTo30 {
+    animation: movingTo30 2s ease-out;
+    position: absolute;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movingTo30 {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 30%;
+    }
+}
+
+.moveFrom30 {
+    animation: movingFrom30 2s ease-in;
+    position: absolute;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movingFrom30 {
+    0% {
+        left: 30%;
+    }
+    30% {
+        left: 100%;
+    }
+}
+
+.oneJump {
+    animation: oneJump .3s;
+    position: relative;
+}
+
+@keyframes oneJump {
+    0% {
+        bottom: 0%;
+    }
+    100% {
+        bottom: 40%;
+    }
+}
+
+.jumping {
+    animation: jumping .2s linear alternate infinite;
+    position: absolute;
+}
+
+@keyframes jumping {
+    0% {
+        bottom: 0%;
+    }
+    100% {
+        bottom: 50%;
+    }
+}
+
+.fade {
+    animation: fade 3s ease-in-out infinite;
+    position: absolute;
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.glow {
+    animation: glow 3s infinite;
+    position: absolute;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0;
+    }
+    50% {
+        box-shadow: -84px -27px 52px 21px rgba(255, 255, 255, 1);
+    }
+    100% {
+        box-shadow: 0;
+    }
+
+}
+
+.fallDown {
+    animation: fall 1s;
+    position: absolute;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        bottom: -33.3px;
+        transform: rotate(90deg);
+    }
+}
+
+.mirror {
+    animation: mirror 1s;
+    position: absolute;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mirror {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+.moveTo0 {
+    animation: moveTo0 2s;
+    position: absolute;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveTo0 {
+    0% {
+        transform: scale(1);
+        left: 30px;
+        top: 30px;
+    }
+    100% {
+        transform: scale(100);
+
+    }
+}
+
+
+.hitter {
+    animation: hitter 0.5s;
+    position: absolute;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes hitter {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+    100% {
+        opacity: 1;
+        top: 50%;
+    }
+
+}
+
+.goHit {
+    animation: goHit 3s;
+    position: absolute;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes goHit {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(360deg);
+        left:25%;
+    }
+    50% {
+        transform: rotate(720deg);
+        left:50%;
+    }
+    75% {
+        transform: rotate(1080deg);
+        left:75%;
+
+    }
+    100% {
+        transform: rotate(1440deg);
+        left:100%;
+    }
+
+
+}
+
+.man1 {
+    animation: man1 0.4s;
+    position: absolute;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes man1 {
+    0% {
+        bottom: 0%;
+    }
+    100% {
+        bottom: -200%;
+
+    }
+
+}

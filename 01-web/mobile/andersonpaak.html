@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="andersonpaak.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <title>Anderson .Paak</title>
+    <style>
+        .scene {
+            background-size: contain;
+            width: 90vh;
+            height: 50vh;
+            margin: auto;
+            position: relative;
+
+        }
+
+        .bg {
+            position: absolute;
+            opacity: 0.3;
+            width: 100%;
+        }
+
+        #man {
+            position: absolute;
+            width: 30%;
+            bottom: 1em;
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="scene">
+        <img class="bg" src="images/medium/paak3.jpg">
+        <img src="images/medium/andersonpaak.png" class="" id="man">
+        <h1 id="h1">Java =/= JavaScript</h1>
+        
+    </div>
+
+
+    <div id="buttons">
+        <br><header> please click the letters so I can do cool stuff! </header><br>
+        <button id="move">A</button>
+        <button id="moveTo30">N</button>
+        <button id="moveFrom30">D</button>
+        <button id="oneJump">E</button>
+        <button id="jumping">R</button>
+        <button id="fade">S</button>
+        <button id="glow">O</button>
+        <button id="fallDown">N</button>
+        <button id="speak">SPACE</button>
+        <button id="shake">.</button>
+        <button id="mirror">P</button>
+        <button id="moveTo0">A</button>
+        <button id="hitter">A</button>
+        <button id="goHit">K</button>
+        <button id="dance">!</button>
+        
+    </div>
+    <audio id="dang">
+        <source src="dang.mp3" type="audio/mp3">
+    </audio>
+    <script src="andersonpaak.js"></script>
+</body>
+
+</html>
